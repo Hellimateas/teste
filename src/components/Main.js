@@ -12,6 +12,19 @@ export default class Main extends Component{
     tarefas:[],
     index: -1,
   };
+  // ======= SALVAR ===============
+
+  
+
+  componentDidUpdate(prevProps, prevState){
+    const {tarefas} = this.state;
+
+    if(tarefas === prevState.tarefas) return;
+
+    localStorage.setItem('tarefas', JSON.stringify(tarefas))
+  }
+
+
 
   // ======= SUBMIT ===============
 
