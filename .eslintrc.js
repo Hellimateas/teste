@@ -7,7 +7,8 @@ module.exports = {
     'plugin:react/recommended',
     'airbnb',
   ],
-  parser: 'babel-eslint',
+  parser: "@babel/eslint-parser",
+  requireConfigFile: false,
   parserOptions: {
     ecmaFeatures: {
       jsx: true,
